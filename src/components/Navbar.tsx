@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { MoreVertical, X } from "lucide-react";
-import logo from "../assets/logo.png";
+import logo from "@/assets/logo.png";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
