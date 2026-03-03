@@ -1,6 +1,7 @@
 import { products } from "../data/products";
 import { getWhatsAppLink } from "../utils/whatsapp";
 import { MessageCircle } from "lucide-react";
+import { getGoogleDriveDirectLink } from "../utils/googleDrive";
 
 export default function Pricelist() {
   return (
@@ -23,7 +24,7 @@ export default function Pricelist() {
             <div key={product.id} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-brand-primary/5 group">
               <div className="relative h-56 overflow-hidden bg-gray-50 flex items-center justify-center p-4">
                 <img 
-                  src={product.image} 
+                  src={getGoogleDriveDirectLink(product.image)} 
                   alt={product.name} 
                   className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                   referrerPolicy="no-referrer"

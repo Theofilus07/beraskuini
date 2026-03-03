@@ -1,12 +1,18 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { MoreVertical, X } from "lucide-react";
+import { APP_CONFIG } from "../constants";
+import { getGoogleDriveDirectLink } from "../utils/googleDrive";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  const logoSrc = APP_CONFIG.useDriveLogo 
+    ? getGoogleDriveDirectLink(APP_CONFIG.logoDriveId) 
+    : APP_CONFIG.localLogoPath;
+
   const menuItems = [
-    { name: "Produk", href: "#produk" },
+    { name: "Galeri", href: "#produk" },
     { name: "Keunggulan", href: "#keunggulan" },
     { name: "Testimoni", href: "#testimoni" },
   ];
@@ -21,7 +27,7 @@ export default function Navbar() {
             transition={{ duration: 0.5 }}
             className="flex items-center gap-2"
           >
-            <img src="/logo.png" alt="Beraskuini Logo" className="h-10 w-auto object-contain" />
+            <img src={logoSrc} alt="Beraskuini Logo" className="h-10 w-auto object-contain" referrerPolicy="no-referrer" />
             <span className="font-bold text-xl tracking-tight text-brand-primary">Beraskuini</span>
           </motion.div>
           <div className="hidden md:flex space-x-8">

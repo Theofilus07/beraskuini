@@ -1,4 +1,6 @@
 import { Wheat, MapPin, Phone, Instagram, Facebook } from "lucide-react";
+import { APP_CONFIG } from "../constants";
+import { getGoogleDriveDirectLink } from "../utils/googleDrive";
 
 const TikTokIcon = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
@@ -7,6 +9,10 @@ const TikTokIcon = ({ className }: { className?: string }) => (
 );
 
 export default function Footer() {
+  const logoSrc = APP_CONFIG.useDriveLogo 
+    ? getGoogleDriveDirectLink(APP_CONFIG.logoDriveId) 
+    : APP_CONFIG.localLogoPath;
+
   return (
     <footer className="bg-brand-primary text-brand-accent py-12 md:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -14,7 +20,7 @@ export default function Footer() {
           
           <div>
             <div className="flex items-center gap-2 h-12 mb-6">
-              <img src="/logo.png" alt="Beraskuini Logo" className="h-12 w-auto object-contain" />
+              <img src={logoSrc} alt="Beraskuini Logo" className="h-12 w-auto object-contain" referrerPolicy="no-referrer" />
               <span className="font-bold text-2xl tracking-tight text-white">Beraskuini</span>
             </div>
             <p className="text-brand-accent/70 max-w-xs leading-relaxed">
