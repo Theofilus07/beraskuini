@@ -26,7 +26,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section id="testimoni" className="py-20 bg-white">
+    <section id="testimoni" className="py-20 bg-brand-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-brand-primary mb-4">Apa Kata Pelanggan Kami?</h2>
@@ -37,7 +37,7 @@ export default function Testimonials() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial) => (
-            <div key={testimonial.id} className="bg-brand-bg rounded-2xl p-8 border border-brand-primary/5">
+            <div key={testimonial.id} className="bg-white rounded-2xl p-8 border border-brand-primary/5 shadow-sm hover:shadow-md transition-all">
               <div className="flex gap-1 mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />

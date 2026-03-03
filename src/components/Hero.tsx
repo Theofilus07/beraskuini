@@ -11,11 +11,11 @@ export default function Hero() {
           className="w-full h-full object-cover"
           referrerPolicy="no-referrer"
         />
-        <div className="absolute inset-0 bg-brand-primary/80 mix-blend-multiply"></div>
+        <div className="absolute inset-0 bg-brand-primary/70 mix-blend-multiply"></div>
       </div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <span className="inline-block py-1 px-3 rounded-full bg-brand-accent/20 text-brand-accent border border-brand-accent/30 text-sm font-semibold tracking-wider mb-6 backdrop-blur-sm">
+        <span className="inline-block py-1 px-3 rounded-full bg-brand-accent/20 text-brand-accent border border-brand-accent/30 text-sm font-semibold tracking-wider mb-6">
           SUPPLY RESTORAN & RUMAH TANGGA
         </span>
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">

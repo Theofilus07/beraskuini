@@ -127,7 +127,7 @@
     @apply border-border outline-ring/50;
   }
   body {
-    background-color: var(--color-brand-bg);
+    @apply bg-brand-bg;
     color: var(--color-brand-primary);
     font-family: var(--font-sans);
   }
