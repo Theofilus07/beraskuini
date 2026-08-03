@@ -19,10 +19,10 @@ export default function Hero() {
           SUPPLY RESTORAN & RUMAH TANGGA
         </span>
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-          Supplier Beras Berkualitas di Makassar<br className="hidden md:block" /> Antar Langsung ke Rumah Anda
+          Beras Berkualitas,<br className="hidden md:block" /> Antar Langsung ke Rumah Anda
         </h1>
         <p className="text-lg md:text-xl text-brand-accent/90 mb-10 max-w-2xl mx-auto leading-relaxed">
-          Melayani pembelian beras eceran dan grosir untuk rumah tangga, restoran, toko, dan pelaku usaha di Makassar dengan layanan pengantaran.
+          Pesan beras pilihan terbaik di Makassar dengan mudah. Kami melayani pembelian eceran dan partai besar untuk kebutuhan bisnis Anda.
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
